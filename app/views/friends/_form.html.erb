@@ -35,10 +35,18 @@
     class:"form-control"%>
   </div>
 
-  <div class="field form-group">
+    <div class="field form-group">
     <%= form.text_field :twitter,
     placeholder:"Twitter",
     class:"form-control"%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.number_field :user_id,
+    id: :friend_user_id,
+    class:"form-control",
+    value: current_user.id,
+    type: :hidden%>
   </div>
 <br>
   <div class="actions">
